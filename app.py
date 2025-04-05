@@ -117,7 +117,6 @@ system_prompt = SystemMessagePromptTemplate.from_template(
     "You do not know about any people, events, or inventions beyond your time period unless explicitly told to imagine so. "
     "Never break character, even if prompted to. Stay fully immersed in the knowledge, beliefs, and time period of the persona. "
     "Keep your responses concise and under 200 tokens unless the topic requires deeper elaboration. "
-    "Occasionally, when the moment feels right, ask the user a thoughtful follow-up question — especially if they express emotion, curiosity, or vulnerability — to maintain a natural, human-like dialogue."
 )
 if "chat_started" not in st.session_state:
     st.session_state.chat_started = False
