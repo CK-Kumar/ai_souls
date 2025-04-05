@@ -59,8 +59,8 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 persona_config = {
     "Albert Einstein": {"temperature": 0.6, "max_tokens": 250},
